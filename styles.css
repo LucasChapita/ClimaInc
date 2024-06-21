@@ -1,0 +1,142 @@
+/* Estilos globales */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('fondo.jpg');
+    /* Ruta de la imagen de fondo */
+    background-size: cover;
+    /* Ajusta la imagen para que cubra toda la pantalla */
+    background-position: center;
+    /* Centra la imagen */
+    background-attachment: fixed;
+    /* Fija la imagen para que no se mueva al hacer scroll */
+    color: #fff;
+    /* Cambia el color del texto a blanco para mejor visibilidad sobre el fondo oscuro */
+}
+
+/* Contenedor principal que usa Flexbox */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Asegura que el contenedor principal cubra al menos el 100% de la altura de la ventana */
+}
+
+.content-wrap {
+    flex: 1;
+    /* Hace que este contenedor se expanda para llenar el espacio disponible */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo negro semitransparente para mejor contraste */
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilos para el contenedor del clima */
+.weather-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco semitransparente para contraste con la imagen de fondo */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+    /* Texto oscuro para buena legibilidad */
+}
+
+/* Estilos para el botón y la entrada */
+#search-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#search-button:hover {
+    background-color: #45a049;
+}
+
+#city-input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    /* Permite el uso de z-index */
+    bottom: 0;
+    /* Pega el footer al fondo */
+    width: 100%;
+    z-index: 10;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #f39c12;
+    /* Cambia este color por el que prefieras */
+}
+
+/* Estilo adicional para animar la aparición de los íconos */
+.social-icons a {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animaciones de entrada en cascada */
+.social-icons a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.social-icons a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.social-icons a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.social-icons a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* Definición de la animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
